@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://3bj4q2hq3e2l"]
+
+[ext_resource type="PackedScene" uid="uid://bjvvc4yryfqdq" path="res://scenes/Player.tscn" id="1_ymo8b"]
+[ext_resource type="PackedScene" uid="uid://dltqory4o1xju" path="res://scenes/World 1.tscn" id="2_gpsl1"]
+[ext_resource type="PackedScene" uid="uid://c3mfxogblbaff" path="res://scenes/Trigger.tscn" id="3_gpsl1"]
+
+[node name="Level 1" type="Node3D" unique_id=2094420022]
+
+[node name="Player" parent="." unique_id=1073054703 instance=ExtResource("1_ymo8b")]
+
+[node name="World 1" parent="." unique_id=782463474 instance=ExtResource("2_gpsl1")]
+
+[node name="Trigger" parent="." unique_id=1411562119 instance=ExtResource("3_gpsl1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -35.92804, -2.3013124, 0)
+
+[node name="Trigger2" parent="." unique_id=1084782653 instance=ExtResource("3_gpsl1")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, -21.869968, -10.320309, 0)
+sceneName = "Level 1"

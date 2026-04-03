@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://dltqory4o1xju"]
+
+[ext_resource type="PackedScene" uid="uid://dcouf5ebbfrlk" path="res://scenes/ObjLamp.tscn" id="1_cb4d4"]
+
+[node name="World 1" type="Node3D" unique_id=782463474]
+
+[node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=992987380]
+omni_range = 390.082
+
+[node name="ObjLamp" parent="." unique_id=59074561 instance=ExtResource("1_cb4d4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.71258396, -1.5184307, -0.34341908)
+
+[node name="CSGCombiner3D" type="CSGCombiner3D" parent="." unique_id=970070727]
+use_collision = true
+
+[node name="Room 1" type="CSGBox3D" parent="CSGCombiner3D" unique_id=1104588871]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.31958008, 0, 0)
+use_collision = true
+flip_faces = true
+size = Vector3(60.63916, 5, 10)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="CSGCombiner3D" unique_id=1602459510]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.857395, -4.8766108, -0.0011041164)
+flip_faces = true
+size = Vector3(7.6132813, 4.7737427, 9.928574)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="CSGCombiner3D" unique_id=1315163605]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -35.824493, 0.56845593, -0.16773033)
+flip_faces = true
+size = Vector3(10.95216, 6.1558685, 12.550354)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="CSGCombiner3D" unique_id=1524145898]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22.074516, -3.2226279, 0.96598625)
+operation = 2
+flip_faces = true
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="." unique_id=1218583645]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22.663443, 0.057130635, -0.08373189)
+omni_range = 390.082
+
+[node name="OmniLight3D3" type="OmniLight3D" parent="." unique_id=496592348]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -33.19292, -0.52806187, -1.855485)
+omni_range = 390.082

@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://bjvvc4yryfqdq"]
+
+[ext_resource type="Script" uid="uid://ds414wc071b5l" path="res://scripts/Player.gd" id="1_p0vlq"]
+[ext_resource type="Script" uid="uid://cbcxnpincesvx" path="res://scenes/Interacting.gd" id="2_v6fml"]
+[ext_resource type="PackedScene" uid="uid://c8rd2bytb7rls" path="res://scenes/ItemPickup.tscn" id="3_3li8b"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_p0vlq"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_v6fml"]
+
+[node name="Player" type="CharacterBody3D" unique_id=1073054703]
+script = ExtResource("1_p0vlq")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=2024596979]
+shape = SubResource("CapsuleShape3D_p0vlq")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1135070976]
+mesh = SubResource("CapsuleMesh_v6fml")
+
+[node name="Head" type="Node3D" parent="." unique_id=2054298080]
+
+[node name="Camera3D" type="Camera3D" parent="Head" unique_id=1257657128]
+
+[node name="RayCast3D" type="RayCast3D" parent="Head/Camera3D" unique_id=1998667006]
+target_position = Vector3(0, 0, -1)
+script = ExtResource("2_v6fml")
+
+[node name="ItemPickup" parent="." unique_id=1754651647 instance=ExtResource("3_3li8b")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
