@@ -62,7 +62,7 @@ Pada bagian ini, saya mengimplementasikan mekanik tambahan:
 
 ---
 
-### 8. 🎒 Inventory HUD (UI)
+### 8. Inventory HUD (UI)
 
 * Saya menambahkan tampilan **Inventory HUD**
 * Saat ini HUD sudah muncul di layar
